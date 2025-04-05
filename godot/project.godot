@@ -15,7 +15,6 @@ run/main_scene="uid://bt7llr06a2lwi"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[rendering]
+[editor_plugins]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+enabled=PackedStringArray("res://addons/ldtk-importer/plugin.cfg")
