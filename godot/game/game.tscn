@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt7llr06a2lwi"]
+
+[ext_resource type="PackedScene" uid="uid://xgqckckrr10a" path="res://bucket/robot.tscn" id="1_l1rk1"]
+[ext_resource type="PackedScene" uid="uid://gfe6lsc6p1j" path="res://bucket/rope_segment.tscn" id="2_h7iqs"]
+[ext_resource type="PackedScene" uid="uid://cywvjnk8qhfr5" path="res://bucket/bucket.tscn" id="3_4fuuu"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Robot" parent="." instance=ExtResource("1_l1rk1")]
+position = Vector2(281, 83)
+collision_layer = 0
+collision_mask = 0
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(278, 113)
+node_a = NodePath("../Robot")
+node_b = NodePath("../RopeSegment")
+
+[node name="RopeSegment" parent="." instance=ExtResource("2_h7iqs")]
+position = Vector2(280, 140)
+collision_layer = 0
+collision_mask = 0
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2(279, 171)
+node_a = NodePath("../RopeSegment")
+node_b = NodePath("../RopeSegment2")
+
+[node name="RopeSegment2" parent="." instance=ExtResource("2_h7iqs")]
+position = Vector2(279, 191)
+collision_layer = 0
+collision_mask = 0
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2(274, 219)
+node_a = NodePath("../RopeSegment2")
+node_b = NodePath("../RopeSegment3")
+
+[node name="RopeSegment3" parent="." instance=ExtResource("2_h7iqs")]
+position = Vector2(278, 244)
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+position = Vector2(275, 269)
+node_a = NodePath("../RopeSegment3")
+node_b = NodePath("../RopeSegment4")
+
+[node name="RopeSegment4" parent="." instance=ExtResource("2_h7iqs")]
+position = Vector2(278, 300)
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="."]
+position = Vector2(275, 329)
+node_a = NodePath("../RopeSegment4")
+node_b = NodePath("../RopeSegment5")
+
+[node name="RopeSegment5" parent="." instance=ExtResource("2_h7iqs")]
+position = Vector2(277, 355)
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="."]
+position = Vector2(277, 383)
+node_a = NodePath("../RopeSegment5")
+node_b = NodePath("../Bucket")
+
+[node name="Bucket" parent="." instance=ExtResource("3_4fuuu")]
+position = Vector2(278, 446)

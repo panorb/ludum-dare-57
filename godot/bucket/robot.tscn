@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://xgqckckrr10a"]
+
+[ext_resource type="Texture2D" uid="uid://s8y85hlbxvqr" path="res://icon.svg" id="1_i8ihq"]
+[ext_resource type="Script" uid="uid://cdwkig23bt3hf" path="res://bucket/robot.gd" id="1_lddei"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i8ihq"]
+radius = 34.0
+height = 70.0
+
+[node name="Robot" type="CharacterBody2D"]
+script = ExtResource("1_lddei")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.53125, 0.53125)
+texture = ExtResource("1_i8ihq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_i8ihq")
