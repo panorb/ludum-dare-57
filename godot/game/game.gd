@@ -18,10 +18,7 @@ func _ready() -> void:
 		func (collision): print('collided')
 	);
 	
-	robot.die.connect(
-		func (): game_over.emit()
-	)
-	
+	robot.died.connect(func (): game_over.emit())
 
 func _physics_process(delta: float) -> void:
 	camera.global_position.y = robot.global_position.y

@@ -4,7 +4,7 @@ class_name Robot extends StaticBody2D
 @onready var rope_ancer : Node2D = %RopeAncer;
 
 signal collided
-signal die
+signal died
 
 var rope_ancer_position: Vector2:
 	get: return rope_ancer.global_position
@@ -29,4 +29,4 @@ func _process(delta: float) -> void:
 		
 		# If collision force came from buttom then die
 		if collision_normal == Vector2.UP:
-			die.emit()
+			died.emit()
