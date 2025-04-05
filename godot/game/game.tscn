@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://8jsy4djy7nlk" path="res://game/game.gd" id="1_h7iqs"]
 [ext_resource type="PackedScene" uid="uid://bl7c0fyqakbdd" path="res://level/level.ldtk" id="1_vasa2"]
-[ext_resource type="PackedScene" uid="uid://dwsgopt6d43c8" path="res://player/player.tscn" id="2_h7iqs"]
+[ext_resource type="PackedScene" uid="uid://xgqckckrr10a" path="res://bucket/robot.tscn" id="2_4fuuu"]
 
 [node name="Game" type="Node2D"]
 texture_filter = 1
@@ -11,5 +11,11 @@ script = ExtResource("1_h7iqs")
 [node name="Level" parent="." instance=ExtResource("1_vasa2")]
 unique_name_in_owner = true
 
-[node name="Player" parent="." instance=ExtResource("2_h7iqs")]
+[node name="Robot" parent="." instance=ExtResource("2_4fuuu")]
 unique_name_in_owner = true
+position = Vector2(350, 52)
+
+[node name="Camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(367, 471)
+offset = Vector2(0, 250)
