@@ -8,4 +8,3 @@ script = ExtResource("1_rkbax")
 
 [node name="Robot" parent="." instance=ExtResource("2_g1dw6")]
 unique_name_in_owner = true
-position = Vector2(235, 103)
