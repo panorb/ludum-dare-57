@@ -4,22 +4,21 @@
 [ext_resource type="Script" uid="uid://dlihjqk50nnc5" path="res://bucket/rope_segment.gd" id="1_qljd1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qljd1"]
-height = 58.0
+radius = 9.0
+height = 24.0
 
 [node name="RopeSegment" type="RigidBody2D"]
 script = ExtResource("1_qljd1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.140625, 0.453125)
+position = Vector2(0, 10)
+scale = Vector2(0.15, 0.2)
 texture = ExtResource("1_3sf8i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
 shape = SubResource("CapsuleShape2D_qljd1")
-
-[node name="Start" type="Node2D" parent="CollisionShape2D"]
-unique_name_in_owner = true
-position = Vector2(0, -29)
 
 [node name="End" type="Node2D" parent="CollisionShape2D"]
 unique_name_in_owner = true
-position = Vector2(0, 29)
+position = Vector2(0, 11)
