@@ -13,5 +13,7 @@ func _process(delta: float) -> void:
 		velocity.x = 200
 	else:
 		velocity.x = 0
+		
+	velocity.y = 0
 	
 	move_and_slide()
