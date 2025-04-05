@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://bt7llr06a2lwi"]
+[gd_scene load_steps=3 format=3 uid="uid://bt7llr06a2lwi"]
+
+[ext_resource type="PackedScene" uid="uid://bl7c0fyqakbdd" path="res://level/level.ldtk" id="1_vasa2"]
+[ext_resource type="PackedScene" uid="uid://dwsgopt6d43c8" path="res://player/player.tscn" id="2_h7iqs"]
 
 [node name="Game" type="Node2D"]
+
+[node name="level" parent="." instance=ExtResource("1_vasa2")]
+
+[node name="Player" parent="." instance=ExtResource("2_h7iqs")]
