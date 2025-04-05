@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/viewport_width=736
+window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 
 [editor_plugins]
@@ -26,6 +27,4 @@ enabled=PackedStringArray("res://addons/ldtk-importer/plugin.cfg")
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
