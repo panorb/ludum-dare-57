@@ -27,6 +27,9 @@ func _process(delta: float) -> void:
 		var collision_normal : Vector2 = collision.get_normal();
 		var collis = collision.get_collider();
 		
-		# If collision force came from buttom then die
+		# If collision force came from buttom then die else it collide
 		if collision_normal == Vector2.UP:
 			died.emit()
+		else:
+			# send direction of collision
+			collided.emit(collision_normal)

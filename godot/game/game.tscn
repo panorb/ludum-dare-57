@@ -20,3 +20,5 @@ position = Vector2(350, 52)
 unique_name_in_owner = true
 position = Vector2(367, 471)
 offset = Vector2(0, 250)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

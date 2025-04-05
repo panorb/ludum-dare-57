@@ -22,6 +22,7 @@ func start_scene(scene: PackedScene):
 func _ready() -> void:
 	self.start_scene(game_scene);
 
-func _on_lose() -> void:
+func _on_lose(game_over_reason) -> void:
+	print(str('Game over: ', game_over_reason));
 	game_over_conatainer.visible = true
 	self.get_tree().paused = true;

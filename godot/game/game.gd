@@ -9,16 +9,29 @@ signal  game_over
 @onready var level : LDTKWorld = %Level;
 @onready var camera : Camera2D = %Camera;
 @onready var robot :Robot = %Robot;
-@onready var _running : bool = true
+
+@onready var _player_life_points : int = 5;
+@onready var player_life_points: int:
+	get:
+		return self._player_life_points;
+	set(value):
+		# minimum of life points is 0
+		self._player_life_points = max(0, value);
+		# if player has no life point then the game is over
+		if self._player_life_points == 0:
+			self.game_over.emit(GameOverReason.NO_LIFE_POINTS);
 
 func _ready() -> void:
 	set_rope_length(10)
 	
+	# If robot collided it takes a damage point
 	robot.collided.connect(
-		func (collision): print('collided')
+		func (collision_normal:Vector2): self.player_life_points -= 1
 	);
-	
-	robot.died.connect(func (): game_over.emit())
+	# if robot dies game is over
+	robot.died.connect(
+		func (): self.game_over.emit(GameOverReason.BROKEN)
+	)
 
 func _physics_process(delta: float) -> void:
 	camera.global_position.y = robot.global_position.y
