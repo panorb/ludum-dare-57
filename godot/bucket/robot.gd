@@ -4,6 +4,7 @@ class_name Robot extends StaticBody2D
 @onready var rope_ancer : Node2D = %RopeAncer;
 
 signal collided
+signal die
 
 var rope_ancer_position: Vector2:
 	get: return rope_ancer.global_position
@@ -15,11 +16,17 @@ func _process(delta: float) -> void:
 	elif Input.is_action_pressed("ui_right"):
 		velocity = Vector2.RIGHT
 
-	velocity += Vector2.DOWN * 0.5
+	velocity= velocity * 3 + Vector2.DOWN * 1.5
 
 	var collision : KinematicCollision2D = move_and_collide(
-		velocity * 3,
+		velocity,
 	);
 	
 	if collision:
-		collided.emit(collision)
+		# Get direction of colision force
+		var collision_normal : Vector2 = collision.get_normal();
+		var collis = collision.get_collider();
+		
+		# If collision force came from buttom then die
+		if collision_normal == Vector2.UP:
+			die.emit()

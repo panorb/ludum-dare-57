@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://xgqckckrr10a" path="res://bucket/robot.tscn" id="2_4fuuu"]
 
 [node name="Game" type="Node2D"]
+process_mode = 1
 texture_filter = 1
 script = ExtResource("1_h7iqs")
 

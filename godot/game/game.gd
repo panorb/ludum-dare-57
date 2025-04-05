@@ -3,18 +3,24 @@ class_name Game extends Node2D
 const rope_segment_scene :PackedScene = preload("res://bucket/rope_segment.tscn");
 const bucket_scene :PackedScene = preload("res://bucket/bucket.tscn");
 
+signal  game_over
 
 @onready var player : Player = %Player;
 @onready var level : LDTKWorld = %Level;
 @onready var camera : Camera2D = %Camera;
 @onready var robot :Robot = %Robot;
+@onready var _running : bool = true
 
 func _ready() -> void:
 	set_rope_length(10)
 	
 	robot.collided.connect(
-		func (collision): print('tott')
+		func (collision): print('collided')
 	);
+	
+	robot.die.connect(
+		func (): game_over.emit()
+	)
 	
 
 func _physics_process(delta: float) -> void:

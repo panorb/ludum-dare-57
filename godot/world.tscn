@@ -1,6 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://p8fyevvv30q8"]
+[gd_scene load_steps=4 format=3 uid="uid://p8fyevvv30q8"]
 
 [ext_resource type="Script" uid="uid://cbe8sm48leun3" path="res://world.gd" id="1_f3sb7"]
 
+[sub_resource type="SystemFont" id="SystemFont_f3sb7"]
+font_names = PackedStringArray("Monospace", "Garuda")
+font_weight = 700
+
+[sub_resource type="LabelSettings" id="LabelSettings_fj7yv"]
+font = SubResource("SystemFont_f3sb7")
+font_size = 50
+
 [node name="World" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_f3sb7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOverContainer" type="AspectRatioContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer/GameOverContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_fj7yv")
+horizontal_alignment = 1
+vertical_alignment = 1
