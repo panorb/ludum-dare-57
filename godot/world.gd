@@ -25,4 +25,3 @@ func _ready() -> void:
 func _on_lose(game_over_reason) -> void:
 	print(str('Game over: ', game_over_reason));
 	game_over_conatainer.visible = true
-	self.get_tree().paused = true;
