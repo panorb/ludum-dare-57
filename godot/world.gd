@@ -23,7 +23,7 @@ func start_scene(scene: PackedScene):
 func _input(event: InputEvent) -> void:
 	if self.current_scene is Game:
 		var running_scene: Game = self.current_scene as Game
-		if event.is_action("ui_accept") and current_scene.is_player_dead:
+		if event.is_action("restart") and current_scene.is_player_dead:
 			self.start_scene(game_scene)
 
 func _ready() -> void:
