@@ -8,6 +8,8 @@ radius = 34.0
 height = 70.0
 
 [node name="Robot" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_lddei")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
