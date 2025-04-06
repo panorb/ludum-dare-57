@@ -14,10 +14,12 @@ position = Vector2(34, 0)
 [node name="Spore2" parent="." instance=ExtResource("1_ncxtp")]
 position = Vector2(25, -11)
 rotation = -1.0472
+direction = Vector2(1.2, 1)
 
 [node name="Spore3" parent="." instance=ExtResource("1_ncxtp")]
 position = Vector2(25, 11)
 rotation = 1.0472
+direction = Vector2(1.2, -1)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(15, 0)

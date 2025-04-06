@@ -23,8 +23,10 @@ func _on_JumpArea_body_entered(body: Node2D):
 	if body.name == "Bucket" and not jumped:
 		$AnimatedSprite2D.play("jump")
 		var direction := body.global_position - global_position
-		apply_central_impulse((body.global_position - global_position) * 2.5)
-		collision_mask = 0
+		direction = direction.normalized()
+		
+		apply_central_impulse((body.global_position - global_position) * 1.97)
+		# collision_mask = 0
 		$AnimatedSprite2D.flip_h = direction.x <= 0
 		
 		jumped = true
@@ -38,7 +40,6 @@ var falling = false
 var falling_time = 0.0
 
 func _process(delta: float) -> void:
-	print(linear_velocity)
 	if falling:
 		falling_time += delta
 	
