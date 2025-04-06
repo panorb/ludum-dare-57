@@ -875,8 +875,8 @@
 			"maxCount": 0,
 			"limitScope": "PerLevel",
 			"limitBehavior": "MoveLastOne",
-			"pivotX": 0,
-			"pivotY": 0,
+			"pivotX": 0.5,
+			"pivotY": 1,
 			"fieldDefs": []
 		},
 		{
@@ -910,8 +910,8 @@
 			"maxCount": 0,
 			"limitScope": "PerLevel",
 			"limitBehavior": "MoveLastOne",
-			"pivotX": 0,
-			"pivotY": 0,
+			"pivotX": 0.5,
+			"pivotY": 0.5,
 			"fieldDefs": [
 				{
 					"identifier": "flip",
@@ -1046,8 +1046,8 @@
 					"entityInstances": [
 						{
 							"__identifier": "Frog",
-							"__grid": [8,12],
-							"__pivot": [0,0],
+							"__grid": [8,13],
+							"__pivot": [0.5,1],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 0, "y": 0, "w": 64, "h": 64 },
 							"__smartColor": "#BE4A2F",
@@ -1055,15 +1055,15 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 31,
-							"px": [256,384],
+							"px": [256,448],
 							"fieldInstances": [],
 							"__worldX": 256,
-							"__worldY": 384
+							"__worldY": 448
 						},
 						{
 							"__identifier": "Bat",
-							"__grid": [2,19],
-							"__pivot": [0,0],
+							"__grid": [2,21],
+							"__pivot": [0.5,0.5],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 64, "y": 0, "w": 64, "h": 64 },
 							"__smartColor": "#D77643",
@@ -1071,15 +1071,15 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 33,
-							"px": [64,608],
+							"px": [64,672],
 							"fieldInstances": [{ "__identifier": "flip", "__type": "Bool", "__value": false, "__tile": null, "defUid": 35, "realEditorValues": [] }],
 							"__worldX": 64,
-							"__worldY": 608
+							"__worldY": 672
 						},
 						{
 							"__identifier": "Bat",
 							"__grid": [18,29],
-							"__pivot": [0,0],
+							"__pivot": [0.5,0.5],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 64, "y": 0, "w": 64, "h": 64 },
 							"__smartColor": "#D77643",
@@ -1098,7 +1098,7 @@
 						{
 							"__identifier": "Bat",
 							"__grid": [3,40],
-							"__pivot": [0,0],
+							"__pivot": [0.5,0.5],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 64, "y": 0, "w": 64, "h": 64 },
 							"__smartColor": "#D77643",
@@ -1110,22 +1110,6 @@
 							"fieldInstances": [{ "__identifier": "flip", "__type": "Bool", "__value": false, "__tile": null, "defUid": 35, "realEditorValues": [] }],
 							"__worldX": 96,
 							"__worldY": 1280
-						},
-						{
-							"__identifier": "Frog",
-							"__grid": [20,30],
-							"__pivot": [0,0],
-							"__tags": [],
-							"__tile": { "tilesetUid": 32, "x": 0, "y": 0, "w": 64, "h": 64 },
-							"__smartColor": "#BE4A2F",
-							"iid": "e31e0a70-1030-11f0-825c-c567eae8f4fc",
-							"width": 64,
-							"height": 64,
-							"defUid": 31,
-							"px": [640,960],
-							"fieldInstances": [],
-							"__worldX": 640,
-							"__worldY": 960
 						}
 					]
 				},

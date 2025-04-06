@@ -6,4 +6,5 @@
 texture_filter = 1
 sprite_frames = ExtResource("1_tj6im")
 animation = &"fly"
-frame_progress = 0.610968
+autoplay = "fly"
+frame_progress = 0.31043

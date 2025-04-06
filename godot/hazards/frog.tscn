@@ -2,7 +2,10 @@
 
 [ext_resource type="SpriteFrames" uid="uid://bymyevh4k42bd" path="res://hazards/frog.aseprite" id="1_gjutc"]
 
-[node name="Frog" type="AnimatedSprite2D"]
+[node name="Frog" type="Node2D"]
 texture_filter = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -11)
 sprite_frames = ExtResource("1_gjutc")
-animation = &"fall"
+animation = &"idle"
