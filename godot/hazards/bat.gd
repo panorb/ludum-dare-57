@@ -1,10 +1,10 @@
-extends AnimatedSprite2D
+extends Node2D
 
-@onready var collision_area : Area2D = %CollisionArea
+@onready var hitbox : Area2D = %HitBox
 
-func _on_CollisionArea_entered():
+func _on_HitBox_body_entered(body: Node2D):
 	print("Damage")
 
 func _ready() -> void:
-	collision_area.area_entered.connect(_on_CollisionArea_entered)
+	hitbox.body_entered.connect(_on_HitBox_body_entered)
 	

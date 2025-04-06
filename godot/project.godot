@@ -29,6 +29,8 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addon
 
 2d_physics/layer_2="Robot"
 2d_physics/layer_3="Bucket"
+2d_physics/layer_4="Hazards"
+2d_physics/layer_5="Ground"
 
 [rendering]
 
