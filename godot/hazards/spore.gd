@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D):
 	if body.name == "Bucket":
-		pass
+		var game : Game = get_tree().get_first_node_in_group("game");
+		game.player_take_damage();
 	elif body.name == "Map":
 		pass

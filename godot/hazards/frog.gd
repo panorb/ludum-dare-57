@@ -34,7 +34,8 @@ func _on_JumpArea_body_entered(body: Node2D):
 func _on_HitBox_body_entered(body: Node2D):
 	if body.name == "Bucket":
 		body.apply_central_impulse((body.global_position - global_position) * 35.0)
-		get_tree().get_first_node_in_group("game").player_life_points -= 1
+		var game : Game = get_tree().get_first_node_in_group("game")
+		game.player_take_damage()
 
 var falling = false
 var falling_time = 0.0
