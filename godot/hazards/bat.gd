@@ -10,7 +10,7 @@ func _on_HitBox_body_entered(body: Node2D):
 		flip = !flip
 		$AnimatedSprite2D.flip_h = flip
 	elif body.name == "Bucket":
-		body.apply_central_impulse((body.global_position - global_position) * 25.0)
+		body.apply_central_impulse((body.global_position - global_position) * 20.0)
 		get_tree().get_first_node_in_group("game").player_life_points -= 1
 		pass
 
