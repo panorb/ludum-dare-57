@@ -14,6 +14,7 @@ signal  game_over
 
 @onready var hearts : Array = [ heart_1 ,heart_2 ,heart_3 ]
 @onready var robot_rope_pin_joint : PinJoint2D = null;
+@onready var bucket : Bucket = null;
 
 @onready var _player_life_points : int = 3;
 @onready var player_life_points: int:
@@ -69,6 +70,7 @@ func set_rope_length(length: int):
 		# create rope segment
 		if rope_segment_index == length - 1: # Last segment is bucket
 			added_segment = bucket_scene.instantiate()
+			self.bucket = added_segment;
 		else:
 			added_segment = rope_segment_scene.instantiate()
 			
@@ -102,3 +104,7 @@ func drop_player_bucket() -> void:
 	if self.robot_rope_pin_joint:
 		self.robot_rope_pin_joint.queue_free()
 		self.robot_rope_pin_joint = null
+
+func player_take_damage() -> void:
+	self.player_life_points -= 1;
+	bucket.take_damage();
