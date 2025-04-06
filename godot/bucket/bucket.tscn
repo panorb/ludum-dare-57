@@ -1,19 +1,21 @@
 [gd_scene load_steps=3 format=3 uid="uid://cywvjnk8qhfr5"]
 
-[ext_resource type="Texture2D" uid="uid://s8y85hlbxvqr" path="res://icon.svg" id="1_q5n62"]
+[ext_resource type="Texture2D" uid="uid://d36jd4jfp6hib" path="res://bucket/bucket.aseprite" id="1_q5n62"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q5n62"]
-radius = 29.0172
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q5n62"]
+radius = 28.0
+height = 80.0
 
 [node name="Bucket" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 16
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 23)
-scale = Vector2(0.45, 0.45)
+texture_filter = 1
+position = Vector2(0, 45)
+scale = Vector2(2, 2)
 texture = ExtResource("1_q5n62")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 23)
-shape = SubResource("CircleShape2D_q5n62")
+position = Vector2(0, 37)
+shape = SubResource("CapsuleShape2D_q5n62")
