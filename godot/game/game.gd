@@ -16,6 +16,7 @@ signal  game_over
 @onready var robot_rope_pin_joint : PinJoint2D = null;
 @onready var bucket : Bucket = null;
 
+@onready var player_damage_allowed : bool = true;
 @onready var _player_life_points : int = 3;
 @onready var player_life_points: int:
 	get:
@@ -71,6 +72,8 @@ func set_rope_length(length: int):
 		if rope_segment_index == length - 1: # Last segment is bucket
 			added_segment = bucket_scene.instantiate()
 			self.bucket = added_segment;
+			self.bucket.damage_disabled.connect(func(): self.player_damage_allowed = false);
+			self.bucket.damage_enabled.connect(func(): self.player_damage_allowed = true);
 		else:
 			added_segment = rope_segment_scene.instantiate()
 			
@@ -106,5 +109,6 @@ func drop_player_bucket() -> void:
 		self.robot_rope_pin_joint = null
 
 func player_take_damage() -> void:
-	self.player_life_points -= 1;
-	bucket.take_damage();
+	if self.player_damage_allowed:
+		self.player_life_points -= 1;
+		bucket.take_damage();
