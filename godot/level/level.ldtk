@@ -1046,7 +1046,7 @@
 					"entityInstances": [
 						{
 							"__identifier": "Frog",
-							"__grid": [8,13],
+							"__grid": [7,22],
 							"__pivot": [0.5,1],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 0, "y": 0, "w": 64, "h": 64 },
@@ -1055,14 +1055,14 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 31,
-							"px": [256,448],
+							"px": [224,736],
 							"fieldInstances": [],
-							"__worldX": 256,
-							"__worldY": 448
+							"__worldX": 224,
+							"__worldY": 736
 						},
 						{
 							"__identifier": "Bat",
-							"__grid": [2,21],
+							"__grid": [8,13],
 							"__pivot": [0.5,0.5],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 64, "y": 0, "w": 64, "h": 64 },
@@ -1071,10 +1071,10 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 33,
-							"px": [64,672],
+							"px": [256,416],
 							"fieldInstances": [{ "__identifier": "flip", "__type": "Bool", "__value": false, "__tile": null, "defUid": 35, "realEditorValues": [] }],
-							"__worldX": 64,
-							"__worldY": 672
+							"__worldX": 256,
+							"__worldY": 416
 						},
 						{
 							"__identifier": "Bat",

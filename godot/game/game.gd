@@ -9,7 +9,7 @@ signal  game_over
 @onready var camera : Camera2D = %Camera;
 @onready var robot :Robot = %Robot;
 
-@onready var _player_life_points : int = 5;
+@onready var _player_life_points : int = 3;
 @onready var player_life_points: int:
 	get:
 		return self._player_life_points;
@@ -21,7 +21,7 @@ signal  game_over
 			self.game_over.emit(GameOverReason.NO_LIFE_POINTS);
 
 func _ready() -> void:
-	set_rope_length(10)
+	set_rope_length(6)
 	
 	# If robot collided it takes a damage point
 	robot.collided.connect(
