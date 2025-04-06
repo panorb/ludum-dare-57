@@ -1110,6 +1110,22 @@
 							"fieldInstances": [{ "__identifier": "flip", "__type": "Bool", "__value": false, "__tile": null, "defUid": 35, "realEditorValues": [] }],
 							"__worldX": 96,
 							"__worldY": 1280
+						},
+						{
+							"__identifier": "Frog",
+							"__grid": [20,30],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": { "tilesetUid": 32, "x": 0, "y": 0, "w": 64, "h": 64 },
+							"__smartColor": "#BE4A2F",
+							"iid": "e31e0a70-1030-11f0-825c-c567eae8f4fc",
+							"width": 64,
+							"height": 64,
+							"defUid": 31,
+							"px": [640,960],
+							"fieldInstances": [],
+							"__worldX": 640,
+							"__worldY": 960
 						}
 					]
 				},
