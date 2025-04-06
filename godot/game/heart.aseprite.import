@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://6lc6daoww3td"
+path="res://.godot/imported/heart.aseprite-a941f81f0003318c43652799950823cd.res"
+
+[deps]
+
+source_file="res://game/heart.aseprite"
+dest_files=["res://.godot/imported/heart.aseprite-a941f81f0003318c43652799950823cd.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

@@ -8,7 +8,11 @@ signal  game_over
 @onready var level : LDTKWorld = %Level;
 @onready var camera : Camera2D = %Camera;
 @onready var robot :Robot = %Robot;
+@onready var heart_1 : TextureRect = %Heart1;
+@onready var heart_2 : TextureRect = %Heart2;
+@onready var heart_3 : TextureRect = %Heart3;
 
+@onready var hearts : Array = [ heart_1 ,heart_2 ,heart_3 ]
 @onready var robot_rope_pin_joint : PinJoint2D = null;
 
 @onready var _player_life_points : int = 3;
@@ -18,6 +22,16 @@ signal  game_over
 	set(value):
 		# minimum of life points is 0
 		self._player_life_points = max(0, value);
+
+
+		# update heart-bracket
+		for heart_index in hearts.size():
+			var current_heart : TextureRect = self.hearts[heart_index]
+			if heart_index < self.player_life_points:
+				current_heart.visible = true
+			else:
+				current_heart.visible = false
+
 		# if player has no life point then the game is over
 		if self._player_life_points == 0:
 			self.robot_died(GameOverReason.NO_LIFE_POINTS);

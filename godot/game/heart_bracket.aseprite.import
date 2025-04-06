@@ -1,0 +1,16 @@
+[remap]
+
+importer="aseprite_wizard.plugin.static-texture"
+type="PortableCompressedTexture2D"
+uid="uid://caeem4f7jn17s"
+path="res://.godot/imported/heart_bracket.aseprite-4bb92bce92bfa937d5982c0e2e761f12.res"
+
+[deps]
+
+source_file="res://game/heart_bracket.aseprite"
+dest_files=["res://.godot/imported/heart_bracket.aseprite-4bb92bce92bfa937d5982c0e2e761f12.res"]
+
+[params]
+
+layer/exclude_layers_pattern=""
+layer/only_visible_layers=false

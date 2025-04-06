@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bt7llr06a2lwi"]
+[gd_scene load_steps=6 format=3 uid="uid://bt7llr06a2lwi"]
 
 [ext_resource type="Script" uid="uid://8jsy4djy7nlk" path="res://game/game.gd" id="1_h7iqs"]
 [ext_resource type="PackedScene" uid="uid://bl7c0fyqakbdd" path="res://level/level.ldtk" id="1_vasa2"]
 [ext_resource type="PackedScene" uid="uid://xgqckckrr10a" path="res://bucket/robot.tscn" id="2_4fuuu"]
+[ext_resource type="Texture2D" uid="uid://caeem4f7jn17s" path="res://game/heart_bracket.aseprite" id="4_dxrkv"]
+[ext_resource type="Texture2D" uid="uid://6lc6daoww3td" path="res://game/heart.aseprite" id="5_dakft"]
 
 [node name="Game" type="Node2D" groups=["game"]]
 process_mode = 1
@@ -21,4 +23,53 @@ unique_name_in_owner = true
 position = Vector2(367, 471)
 offset = Vector2(0, 250)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="HeartBracket" type="TextureRect" parent="UILayer"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 601.0
+offset_top = 10.0
+offset_right = -45.0
+offset_bottom = -608.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_dxrkv")
+
+[node name="Heart1" type="TextureRect" parent="UILayer/HeartBracket"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -60.0
+offset_bottom = -4.0
+texture = ExtResource("5_dakft")
+
+[node name="Heart2" type="TextureRect" parent="UILayer/HeartBracket"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 4.0
+offset_right = -32.0
+offset_bottom = -4.0
+texture = ExtResource("5_dakft")
+
+[node name="Heart3" type="TextureRect" parent="UILayer/HeartBracket"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+texture = ExtResource("5_dakft")
