@@ -5,7 +5,6 @@ const bucket_scene :PackedScene = preload("res://bucket/bucket.tscn");
 
 signal  game_over
 
-@onready var player : Player = %Player;
 @onready var level : LDTKWorld = %Level;
 @onready var camera : Camera2D = %Camera;
 @onready var robot :Robot = %Robot;
@@ -51,9 +50,7 @@ func set_rope_length(length: int):
 		if rope_segment_index == length - 1: # Last segment is bucket
 			added_segment = bucket_scene.instantiate()
 		else:
-			added_segment = rope_segment_scene.instantiate();
-			added_segment.collision_layer = 0;
-			added_segment.collision_mask = 0;
+			added_segment = rope_segment_scene.instantiate()
 			
 		added_segment.global_position = current_rope_anchor;
 		self.add_child(added_segment);
