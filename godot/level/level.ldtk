@@ -43,7 +43,7 @@
 	"defs": { "layers": [
 		{
 			"__type": "Entities",
-			"identifier": "Hazard",
+			"identifier": "Hazards",
 			"type": "Entities",
 			"uid": 34,
 			"doc": null,
@@ -78,7 +78,7 @@
 		},
 		{
 			"__type": "IntGrid",
-			"identifier": "IntGrid",
+			"identifier": "Map",
 			"type": "IntGrid",
 			"uid": 2,
 			"doc": null,
@@ -1021,7 +1021,7 @@
 			"fieldInstances": [],
 			"layerInstances": [
 				{
-					"__identifier": "Hazard",
+					"__identifier": "Hazards",
 					"__type": "Entities",
 					"__cWid": 23,
 					"__cHei": 43,
@@ -1078,7 +1078,7 @@
 						},
 						{
 							"__identifier": "Bat",
-							"__grid": [18,25],
+							"__grid": [18,29],
 							"__pivot": [0,0],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 64, "y": 0, "w": 64, "h": 64 },
@@ -1087,17 +1087,17 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 33,
-							"px": [576,800],
+							"px": [576,928],
 							"fieldInstances": [{ "__identifier": "flip", "__type": "Bool", "__value": true, "__tile": null, "defUid": 35, "realEditorValues": [{
 								"id": "V_Bool",
 								"params": [ true ]
 							}] }],
 							"__worldX": 576,
-							"__worldY": 800
+							"__worldY": 928
 						},
 						{
 							"__identifier": "Bat",
-							"__grid": [3,36],
+							"__grid": [3,40],
 							"__pivot": [0,0],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 64, "y": 0, "w": 64, "h": 64 },
@@ -1106,15 +1106,15 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 33,
-							"px": [96,1152],
+							"px": [96,1280],
 							"fieldInstances": [{ "__identifier": "flip", "__type": "Bool", "__value": false, "__tile": null, "defUid": 35, "realEditorValues": [] }],
 							"__worldX": 96,
-							"__worldY": 1152
+							"__worldY": 1280
 						}
 					]
 				},
 				{
-					"__identifier": "IntGrid",
+					"__identifier": "Map",
 					"__type": "IntGrid",
 					"__cWid": 23,
 					"__cHei": 43,
