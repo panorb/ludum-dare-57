@@ -1,0 +1,5 @@
+[gd_resource type="SystemFont" format=3 uid="uid://c1jhvautqj53y"]
+
+[resource]
+font_names = PackedStringArray("Monospace", "Garuda")
+font_weight = 700

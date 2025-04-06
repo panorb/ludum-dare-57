@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://p8fyevvv30q8"]
+[gd_scene load_steps=6 format=3 uid="uid://p8fyevvv30q8"]
 
 [ext_resource type="Script" uid="uid://cbe8sm48leun3" path="res://world.gd" id="1_f3sb7"]
-
-[sub_resource type="SystemFont" id="SystemFont_f3sb7"]
-font_names = PackedStringArray("Monospace", "Garuda")
-font_weight = 700
+[ext_resource type="SystemFont" uid="uid://c1jhvautqj53y" path="res://game_over_font.tres" id="2_fj7yv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fj7yv"]
-font = SubResource("SystemFont_f3sb7")
+font = ExtResource("2_fj7yv")
 font_size = 50
+font_color = Color(0.856067, 0.856067, 0.856067, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tlwt5"]
+font = ExtResource("2_fj7yv")
+font_size = 20
+font_color = Color(0.854902, 0.854902, 0.854902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aqk2v"]
+font = ExtResource("2_fj7yv")
+font_color = Color(0.854902, 0.854902, 0.854902, 1)
 
 [node name="World" type="Node2D"]
 process_mode = 3
@@ -16,18 +23,44 @@ script = ExtResource("1_f3sb7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="GameOverContainer" type="AspectRatioContainer" parent="CanvasLayer"]
+[node name="GameOverPanel" type="Panel" parent="CanvasLayer"]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GameOverLabel" type="Label" parent="CanvasLayer/GameOverContainer"]
+[node name="GameOverContainer" type="AspectRatioContainer" parent="CanvasLayer/GameOverPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/GameOverPanel/GameOverContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer/GameOverPanel/GameOverContainer/VBoxContainer"]
 layout_mode = 2
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_fj7yv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverReasonLabel" type="Label" parent="CanvasLayer/GameOverPanel/GameOverContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_tlwt5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverRetryLabel" type="Label" parent="CanvasLayer/GameOverPanel/GameOverContainer/VBoxContainer"]
+layout_mode = 2
+text = "Press enter to retry"
+label_settings = SubResource("LabelSettings_aqk2v")
 horizontal_alignment = 1
 vertical_alignment = 1

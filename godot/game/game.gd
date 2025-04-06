@@ -7,7 +7,7 @@ signal  game_over
 
 @onready var level : LDTKWorld = %Level;
 @onready var camera : Camera2D = %Camera;
-@onready var robot :Robot = %Robot;
+@onready var robot : Robot = %Robot;
 @onready var heart_1 : TextureRect = %Heart1;
 @onready var heart_2 : TextureRect = %Heart2;
 @onready var heart_3 : TextureRect = %Heart3;
@@ -35,6 +35,9 @@ signal  game_over
 		# if player has no life point then the game is over
 		if self._player_life_points == 0:
 			self.robot_died(GameOverReason.NO_LIFE_POINTS);
+
+@export var is_player_dead: bool :
+	get: return robot.dead;
 
 func _ready() -> void:
 	set_rope_length(6)
