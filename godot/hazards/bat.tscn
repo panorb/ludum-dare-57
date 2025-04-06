@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b00yteqo6wmhq"]
+
+[ext_resource type="SpriteFrames" uid="uid://cgvc56rqs68l8" path="res://hazards/bat.aseprite" id="1_tj6im"]
+
+[node name="Bat" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = ExtResource("1_tj6im")
+animation = &"fly"
+frame_progress = 0.628083

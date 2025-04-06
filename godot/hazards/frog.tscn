@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blh6cpj555ng8"]
+
+[ext_resource type="SpriteFrames" uid="uid://bymyevh4k42bd" path="res://hazards/frog.aseprite" id="1_gjutc"]
+
+[node name="Frog" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = ExtResource("1_gjutc")
+animation = &"fall"
