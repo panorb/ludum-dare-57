@@ -25,6 +25,11 @@ window/stretch/aspect="keep_width"
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/ldtk-importer/plugin.cfg")
 
+[layer_names]
+
+2d_physics/layer_2="Robot"
+2d_physics/layer_3="Bucket"
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)

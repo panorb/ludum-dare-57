@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b00yteqo6wmhq"]
+[gd_scene load_steps=4 format=3 uid="uid://b00yteqo6wmhq"]
 
 [ext_resource type="SpriteFrames" uid="uid://cgvc56rqs68l8" path="res://hazards/bat.aseprite" id="1_tj6im"]
+[ext_resource type="Script" uid="uid://dqh0x6psc81g4" path="res://hazards/bat.gd" id="2_34g2m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_34g2m"]
+radius = 12.0
+height = 34.0
 
 [node name="Bat" type="AnimatedSprite2D"]
 texture_filter = 1
@@ -8,3 +13,14 @@ sprite_frames = ExtResource("1_tj6im")
 animation = &"fly"
 autoplay = "fly"
 frame_progress = 0.31043
+script = ExtResource("2_34g2m")
+
+[node name="CollisionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+position = Vector2(0, -1)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_34g2m")
