@@ -16,7 +16,7 @@ radius = 322.3
 [node name="Frog" type="RigidBody2D"]
 texture_filter = 1
 collision_layer = 8
-collision_mask = 16
+collision_mask = 20
 script = ExtResource("1_dcanm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -46,3 +46,12 @@ collision_mask = 4
 position = Vector2(0, -11)
 shape = SubResource("CircleShape2D_sng4r")
 debug_color = Color(0.767464, 0.356611, 0.694817, 0.42)
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -11)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_gjutc")
