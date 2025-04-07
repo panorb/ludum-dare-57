@@ -103,6 +103,7 @@ func set_rope_length(length: int):
 
 func robot_died(game_over_reason) -> void:
 	self.robot.move_allow = false;
+	$ExplosionAudioPlayer.play()
 	self.drop_player_bucket();
 	self.game_over.emit(game_over_reason);
 

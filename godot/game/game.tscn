@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bt7llr06a2lwi"]
+[gd_scene load_steps=7 format=3 uid="uid://bt7llr06a2lwi"]
 
 [ext_resource type="Script" uid="uid://8jsy4djy7nlk" path="res://game/game.gd" id="1_h7iqs"]
 [ext_resource type="PackedScene" uid="uid://bl7c0fyqakbdd" path="res://level/level.ldtk" id="1_vasa2"]
 [ext_resource type="PackedScene" uid="uid://xgqckckrr10a" path="res://bucket/robot.tscn" id="2_4fuuu"]
 [ext_resource type="Texture2D" uid="uid://caeem4f7jn17s" path="res://game/heart_bracket.aseprite" id="4_dxrkv"]
 [ext_resource type="Texture2D" uid="uid://6lc6daoww3td" path="res://game/heart.aseprite" id="5_dakft"]
+[ext_resource type="AudioStream" uid="uid://bdacgfjflp50m" path="res://sounds/explosion.wav" id="6_dakft"]
 
 [node name="Game" type="Node2D" groups=["game"]]
 process_mode = 1
@@ -73,3 +74,7 @@ offset_top = 4.0
 offset_right = -4.0
 offset_bottom = -4.0
 texture = ExtResource("5_dakft")
+
+[node name="ExplosionAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_dakft")
+bus = &"sfx"

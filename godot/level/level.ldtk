@@ -1628,6 +1628,22 @@
 							"fieldInstances": [],
 							"__worldX": 432,
 							"__worldY": 4048
+						},
+						{
+							"__identifier": "Mushroom",
+							"__grid": [13,23],
+							"__pivot": [0,0.5],
+							"__tags": [],
+							"__tile": { "tilesetUid": 32, "x": 128, "y": 0, "w": 64, "h": 64 },
+							"__smartColor": "#EAD4AA",
+							"iid": "447c22c0-1030-11f0-8c5e-9bdd03b0b800",
+							"width": 64,
+							"height": 64,
+							"defUid": 36,
+							"px": [416,752],
+							"fieldInstances": [],
+							"__worldX": 416,
+							"__worldY": 752
 						}
 					]
 				},

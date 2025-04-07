@@ -13,6 +13,6 @@ func _process(delta: float) -> void:
 		$Spore2.position = $Spore2.start_position
 		$Spore3.position = $Spore3.start_position
 		time_sine_last_shot = 0.0
-		
+		$AudioStreamPlayer2D.play()
 		pass
 	

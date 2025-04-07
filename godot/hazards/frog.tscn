@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://blh6cpj555ng8"]
+[gd_scene load_steps=7 format=3 uid="uid://blh6cpj555ng8"]
 
 [ext_resource type="Script" uid="uid://nwp6qdqlmar6" path="res://hazards/frog.gd" id="1_dcanm"]
 [ext_resource type="SpriteFrames" uid="uid://bymyevh4k42bd" path="res://hazards/frog.aseprite" id="1_gjutc"]
+[ext_resource type="AudioStream" uid="uid://b5qth11oljm3o" path="res://sounds/frog_jump.wav" id="3_sng4r"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjutc"]
 radius = 6.0
@@ -55,3 +56,6 @@ collision_mask = 4
 position = Vector2(0, -11)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_gjutc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_sng4r")

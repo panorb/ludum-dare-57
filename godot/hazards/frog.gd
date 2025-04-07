@@ -22,6 +22,7 @@ func _on_ReadyArea_body_exited(body: Node2D):
 func _on_JumpArea_body_entered(body: Node2D):
 	if body.name == "Bucket" and not jumped:
 		$AnimatedSprite2D.play("jump")
+		$AudioStreamPlayer.play()
 		var direction := body.global_position - global_position
 		direction = direction.normalized()
 		
