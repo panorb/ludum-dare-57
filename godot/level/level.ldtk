@@ -1781,22 +1781,6 @@
 						},
 						{
 							"__identifier": "Mushroom",
-							"__grid": [7,233],
-							"__pivot": [0,0.5],
-							"__tags": [],
-							"__tile": { "tilesetUid": 32, "x": 128, "y": 0, "w": 64, "h": 64 },
-							"__smartColor": "#EAD4AA",
-							"iid": "baa22fa0-1030-11f0-83e0-41f6f8424007",
-							"width": 64,
-							"height": 64,
-							"defUid": 36,
-							"px": [224,7472],
-							"fieldInstances": [],
-							"__worldX": 224,
-							"__worldY": 7472
-						},
-						{
-							"__identifier": "Mushroom",
 							"__grid": [7,238],
 							"__pivot": [0,0.5],
 							"__tags": [],
@@ -1813,7 +1797,7 @@
 						},
 						{
 							"__identifier": "Bat",
-							"__grid": [16,230],
+							"__grid": [16,233],
 							"__pivot": [0.5,0.5],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 64, "y": 0, "w": 64, "h": 64 },
@@ -1822,14 +1806,14 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 33,
-							"px": [528,7376],
+							"px": [528,7472],
 							"fieldInstances": [{ "__identifier": "flip", "__type": "Bool", "__value": false, "__tile": null, "defUid": 35, "realEditorValues": [] }],
 							"__worldX": 528,
-							"__worldY": 7376
+							"__worldY": 7472
 						},
 						{
 							"__identifier": "Mushroom",
-							"__grid": [1,204],
+							"__grid": [1,208],
 							"__pivot": [0,0.5],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 128, "y": 0, "w": 64, "h": 64 },
@@ -1838,14 +1822,14 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 36,
-							"px": [32,6544],
+							"px": [32,6672],
 							"fieldInstances": [],
 							"__worldX": 32,
-							"__worldY": 6544
+							"__worldY": 6672
 						},
 						{
 							"__identifier": "Mushroom",
-							"__grid": [1,212],
+							"__grid": [1,217],
 							"__pivot": [0,0.5],
 							"__tags": [],
 							"__tile": { "tilesetUid": 32, "x": 128, "y": 0, "w": 64, "h": 64 },
@@ -1854,10 +1838,10 @@
 							"width": 64,
 							"height": 64,
 							"defUid": 36,
-							"px": [32,6800],
+							"px": [32,6960],
 							"fieldInstances": [],
 							"__worldX": 32,
-							"__worldY": 6800
+							"__worldY": 6960
 						},
 						{
 							"__identifier": "Bat",
