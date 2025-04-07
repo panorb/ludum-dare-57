@@ -39,8 +39,10 @@ signal game_win
 		if self._player_life_points == 0:
 			self.robot_died(GameOverReason.NO_LIFE_POINTS);
 
-@export var is_player_dead: bool :
-	get: return robot.dead;
+@export var player_move_allowed : bool:
+	get: return robot.move_allow;
+	set(value): robot.move_allow = value;
+	
 
 func _ready() -> void:
 	set_rope_length(6)
@@ -100,7 +102,7 @@ func set_rope_length(length: int):
 		current_joining_node = added_segment;
 
 func robot_died(game_over_reason) -> void:
-	self.robot.dead = true;
+	self.robot.move_allow = false;
 	self.drop_player_bucket();
 	self.game_over.emit(game_over_reason);
 

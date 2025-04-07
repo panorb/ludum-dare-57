@@ -6,7 +6,7 @@ class_name Robot extends StaticBody2D
 signal collided
 signal died
 
-@onready var dead := false;
+@onready var move_allow := true;
 
 var rope_ancer_position: Vector2:
 	get: return rope_ancer.global_position
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	velocity = velocity * 3 + Vector2.DOWN * 1.5
 	
 	# If player is dead do not move anymore
-	if self.dead:
+	if !self.move_allow:
 		velocity = Vector2.ZERO;
 
 	var collision : KinematicCollision2D = move_and_collide(
