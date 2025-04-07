@@ -18,7 +18,6 @@ func post_import(entity_layer: LDTKEntityLayer) -> LDTKEntityLayer:
 			bat_root.flipped = entity.fields.flip
 			entity_layer.add_child(bat_root)
 		elif entity.identifier == "Frog":
-			print(entity)
 			var frog_root : Frog = frog_scene.instantiate()
 			frog_root.name = entity.iid
 			frog_root.position = entity.position
