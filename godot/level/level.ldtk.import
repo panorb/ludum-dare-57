@@ -7,10 +7,10 @@ path="res://.godot/imported/level.ldtk-3b4788c55a3157edba736a6c6141f491.scn"
 
 [deps]
 
-files=["res://level/tilesets/tileset_32px.res", "res://.godot/imported/level.ldtk-3b4788c55a3157edba736a6c6141f491.scn"]
+files=["res://level/tilesets/tileset_32px.res", "res://level/levels/Level_0.scn", "res://.godot/imported/level.ldtk-3b4788c55a3157edba736a6c6141f491.scn"]
 
 source_file="res://level/level.ldtk"
-dest_files=["res://.godot/imported/level.ldtk-3b4788c55a3157edba736a6c6141f491.scn", "res://level/tilesets/tileset_32px.res", "res://.godot/imported/level.ldtk-3b4788c55a3157edba736a6c6141f491.scn"]
+dest_files=["res://.godot/imported/level.ldtk-3b4788c55a3157edba736a6c6141f491.scn", "res://level/tilesets/tileset_32px.res", "res://level/levels/Level_0.scn", "res://.godot/imported/level.ldtk-3b4788c55a3157edba736a6c6141f491.scn"]
 
 [params]
 
