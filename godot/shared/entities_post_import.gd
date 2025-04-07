@@ -4,6 +4,7 @@ extends Node
 var bat_scene : PackedScene = preload("res://hazards/bat.tscn")
 var frog_scene : PackedScene = preload("res://hazards/frog.tscn")
 var mushroom_scene : PackedScene = preload("res://hazards/mushroom.tscn")
+var winarea_scene : PackedScene = preload("res://winarea/winarea.tscn")
 
 func post_import(entity_layer: LDTKEntityLayer) -> LDTKEntityLayer:
 	var definition: Dictionary = entity_layer.definition
@@ -28,5 +29,10 @@ func post_import(entity_layer: LDTKEntityLayer) -> LDTKEntityLayer:
 			mushroom_root.name = entity.iid
 			mushroom_root.position = entity.position
 			entity_layer.add_child(mushroom_root)
+		elif entity.identifier == "Winarea":
+			var winarea_root = winarea_scene.instantiate()
+			winarea_root.name = entity.iid;
+			winarea_root.position = entity.position;
+			entity_layer.add_child(winarea_root);
 
 	return entity_layer

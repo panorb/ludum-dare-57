@@ -18,6 +18,7 @@ func start_scene(scene: PackedScene):
 	if self.current_scene is Game:
 		var game_scene = self.current_scene as Game;
 		game_scene.game_over.connect(_on_lose);
+		game_scene.game_win.connect(_on_win);
 		game_over_panel.visible = false;
 
 func _input(event: InputEvent) -> void:
@@ -36,3 +37,6 @@ func _on_lose(game_over_reason) -> void:
 		game_over_reason_label.text = 'The robot hit the floor'
 	elif game_over_reason == GameOverReason.NO_LIFE_POINTS:
 		game_over_reason_label.text = 'You lost all life points'
+
+func _on_win() -> void:
+	print('game_win')

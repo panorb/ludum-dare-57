@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqcocapv2ks6a"]
+
+[ext_resource type="Script" uid="uid://btvf1bllpc6yh" path="res://winarea/winarea.gd" id="1_ah7v5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25rxh"]
+size = Vector2(32, 32)
+
+[node name="Winarea" type="Node2D"]
+script = ExtResource("1_ah7v5")
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_25rxh")
+debug_color = Color(0, 0.86, 0.129, 0.588235)

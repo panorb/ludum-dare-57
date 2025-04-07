@@ -3,7 +3,8 @@ class_name Game extends Node2D
 const rope_segment_scene :PackedScene = preload("res://bucket/rope_segment.tscn");
 const bucket_scene :PackedScene = preload("res://bucket/bucket.tscn");
 
-signal  game_over
+signal game_over
+signal game_win
 
 @onready var level : LDTKWorld = %Level;
 @onready var camera : Camera2D = %Camera;
@@ -112,3 +113,6 @@ func player_take_damage() -> void:
 	if self.player_damage_allowed:
 		self.player_life_points -= 1;
 		bucket.take_damage();
+
+func player_win() -> void:
+	game_win.emit()
