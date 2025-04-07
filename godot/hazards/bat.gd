@@ -4,8 +4,6 @@ extends Node2D
 @export var flipped : bool = false
 
 func _on_HitBox_body_entered(body: Node2D):
-	print(body.name)
-	
 	if body.name == "Map":
 		flipped = not flipped
 		$AnimatedSprite2D.flip_h = flipped

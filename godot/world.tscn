@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://p8fyevvv30q8"]
+[gd_scene load_steps=8 format=3 uid="uid://p8fyevvv30q8"]
 
 [ext_resource type="Script" uid="uid://cbe8sm48leun3" path="res://world.gd" id="1_f3sb7"]
 [ext_resource type="SystemFont" uid="uid://c1jhvautqj53y" path="res://game_over_font.tres" id="2_fj7yv"]
+[ext_resource type="AudioStream" uid="uid://dkcab5rd1o8cq" path="res://sounds/win_music.ogg" id="3_tlwt5"]
+[ext_resource type="AudioStream" uid="uid://xiekigvkibba" path="res://sounds/bgm.ogg" id="4_aqk2v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fj7yv"]
 font = ExtResource("2_fj7yv")
@@ -68,7 +70,6 @@ vertical_alignment = 1
 
 [node name="GameWinPanel" type="Panel" parent="CanvasLayer"]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -91,3 +92,20 @@ alignment = 1
 layout_mode = 2
 text = "YOU WIN"
 label_settings = SubResource("LabelSettings_fj7yv")
+horizontal_alignment = 1
+
+[node name="CloseGameLabel" type="Label" parent="CanvasLayer/GameWinPanel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "You can close the game now."
+label_settings = SubResource("LabelSettings_tlwt5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tlwt5")
+bus = &"bgm"
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_aqk2v")
+autoplay = true
+bus = &"bgm"

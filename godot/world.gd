@@ -50,4 +50,7 @@ func _on_win() -> void:
 			var running_scene: Game = self.current_scene as Game;
 			running_scene.player_move_allowed = false;
 		game_win_panel.visible =  true;
+		$BGMPlayer.stop()
+		$WinMusicPlayer.play()
+		is_player_dead = true
 	
