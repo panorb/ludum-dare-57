@@ -36,6 +36,3 @@ func _process(delta: float) -> void:
 		# If collision force came from buttom then die else it collide
 		if collision_normal == Vector2.UP:
 			died.emit()
-		else:
-			# send direction of collision
-			collided.emit(collision_normal)
