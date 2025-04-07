@@ -21,7 +21,7 @@ position = Vector2(365, 79)
 
 [node name="Camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(367, 471)
+position = Vector2(368, 79)
 offset = Vector2(0, 250)
 
 [node name="UILayer" type="CanvasLayer" parent="."]
